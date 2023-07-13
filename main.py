@@ -1,5 +1,6 @@
 import time
 
+import uvicorn
 from fastapi import FastAPI, Depends, HTTPException, Request
 from fastapi.responses import JSONResponse, HTMLResponse
 from fastapi.templating import Jinja2Templates
@@ -47,3 +48,6 @@ def healthchecker(db: Session = Depends(get_db)):
 
 
 app.include_router(contacts.router, prefix='/api')
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8000)
