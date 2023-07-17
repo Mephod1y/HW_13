@@ -10,6 +10,7 @@ from sqlalchemy import text
 
 from src.database.db import get_db
 from src.routes import contacts, auth
+from src.conf.config import settings
 
 app = FastAPI()
 

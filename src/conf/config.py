@@ -2,9 +2,9 @@ from pydantic import BaseSettings
 
 
 class Settings(BaseSettings):
-    # sqlalchemy_database_url: str
-    # secret_key: str
-    # algorithm: str
+    sqlalchemy_database_url: str
+    secret_key: str
+    algorithm: str
     mail_username: str
     mail_password: str
     mail_from: str
